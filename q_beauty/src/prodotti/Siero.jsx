@@ -44,6 +44,11 @@ function Siero() {
             <li> Vegan 🍃 </li>
             <li> +90% di ingredienti di origine naturale 🌿</li>
           </ul>
+          <div style={{ marginTop: '2rem', fontSize: '1.3rem', lineHeight: '1.6' }}>
+            <p><strong>💰 Prezzo:</strong> € 24,90</p>
+            <p>🔹 <strong>-10%</strong> sul primo acquisto → <strong>€ 22,40</strong></p>
+            <p>🔹 <strong>-15%</strong> FISSO per le P. IVA → <strong>€ 21,00  IVA incl.</strong></p>
+          </div>
         </div>
       </div>
 

@@ -76,8 +76,8 @@ function HomePage() {
 
         {/* Contatti Instagram */}
         <section className="contact">
-          <h2>Contatti</h2>
-          <p>Per collaborazioni, scrivici su Instagram</p>
+          <h2>INSTAGRAM</h2>
+          <p>Per rimanere aggiornato su tutte le novità e le ultime uscite, non dimenticarti di seguirci su Instagram</p>
           <a
             href="https://www.instagram.com/q.beauty_pedicurexperience/"
             target="_blank"
@@ -96,8 +96,10 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Footer (inserisci qui il tuo componente/footer futuro) */}
-        {/* <footer className="footer">Contenuto del footer...</footer> */}
+        {/* Footer aggiunto */}
+        <footer className="site-footer">
+          <p>© {new Date().getFullYear()} Tutti i diritti riservati – Realizzato da Gabriele Giardino</p>
+        </footer>
       </main>
     </div>
   );

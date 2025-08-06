@@ -9,10 +9,10 @@ const ContactForm = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
+      'service_e1hp36l',
+      'template_5fivb9r',
       form.current,
-      'YOUR_PUBLIC_KEY'
+      'DtyZoS-5yDQucPHO9'
     ).then(
       () => {
         alert('Messaggio inviato con successo!');

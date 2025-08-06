@@ -23,8 +23,12 @@ function SetPage() {
             <li>Crema Piedi Idratante</li>
           </ul>
           <p>
-            Perfetto per un trattamento professionale completo a casa o in cabina.
+          Offri alla tua clientela un servizio pedicure completo firmato Q•BEAUTY
           </p>
+          <div style={{ marginTop: '2rem', fontSize: '1.3rem', lineHeight: '1.6' }}>
+            <p><strong>💰 Prezzo dedicato ai PRIVATI:</strong> € 60,00</p>
+            <p><strong>💰 Prezzo dedicato a P.IVA:</strong> € 54,00</p>
+          </div>
 
           <Link to="/home" className="cta-button" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
             ← Torna ai Prodotti
