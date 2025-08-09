@@ -1,3 +1,4 @@
+// src/HomePage.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaInstagram } from 'react-icons/fa';
@@ -39,7 +40,16 @@ function HomePage() {
               <div className="modal-text">
                 <h3>Chi sono</h3>
                 <p>
-                  Sono <strong>Elena Santucci</strong>, onicotecnica ed estetista dal 2013, Nail Educator dal 2020 con più di mille corsiste formate insieme alla NAE Academy.
+                  Sono{' '}
+                  <a
+                    href="https://www.instagram.com/queenhelene_nails/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: '#ffcc00', fontWeight: 'bold', textDecoration: 'underline' }}
+                  >
+                    Elena Santucci
+                  </a>
+                  , onicotecnica ed estetista dal 2013, Nail Educator dal 2020 con più di mille corsiste formate insieme alla NAE Academy.
                   Nonostante le mani siano la mia più grande passione, tutto ciò che riguarda la cura del piede è da sempre stato parte fondamentale della mia carriera.
                   Per questo motivo dopo anni di lavoro sul campo e mesi di ricerche nasce Q.Beauty, una linea dedicata alla pedicure professionale qualitativamente alta ed esteticamente d’impatto, per portare il trattamento Pedicure ad un altro livello.
                 </p>
@@ -98,7 +108,17 @@ function HomePage() {
 
         {/* Footer aggiunto */}
         <footer className="site-footer">
-          <p>© {new Date().getFullYear()} Tutti i diritti riservati – Realizzato da Gabriele Giardino</p>
+          <p>
+            © {new Date().getFullYear()} Tutti i diritti riservati – Realizzato da{' '}
+            <a
+              href="https://www.instagram.com/gabrielegiardino_/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#ffcc00', fontWeight: 'bold', textDecoration: 'underline' }}
+            >
+              Gabriele Giardino
+            </a>
+          </p>
         </footer>
       </main>
     </div>

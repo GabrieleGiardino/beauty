@@ -26,8 +26,16 @@ function SetPage() {
           Offri alla tua clientela un servizio pedicure completo firmato Q•BEAUTY
           </p>
           <div style={{ marginTop: '2rem', fontSize: '1.3rem', lineHeight: '1.6' }}>
-            <p><strong>💰 Prezzo dedicato ai PRIVATI:</strong> € 60,00</p>
-            <p><strong>💰 Prezzo dedicato a P.IVA:</strong> € 54,00</p>
+            <p>
+              <strong>💰 Prezzo dedicato ai PRIVATI:</strong>{' '}
+              <del style={{ color: '#ccc', marginRight: '8px' }}>€ 67,70</del>
+              <span style={{ fontWeight: 'bold' }}>€ 60,00</span>
+            </p>
+            <p>
+              <strong>💰 Prezzo dedicato a P.IVA:</strong>{' '}
+              <del style={{ color: '#ccc', marginRight: '8px' }}>€ 67,70</del>
+              <span style={{ fontWeight: 'bold' }}>€ 54,00</span>
+            </p>
           </div>
 
           <Link to="/home" className="cta-button" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
