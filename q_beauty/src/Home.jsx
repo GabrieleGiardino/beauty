@@ -6,7 +6,6 @@ import ContactForm from "./components/ContactForm";
 import SiteNav from "./components/SiteNav";
 import { QB_SHOP_URLS } from "./shopLinks";
 
-const heroPoster = "/img/last.jpg";
 const heroVideo = "/video/hero-qbeauty.mp4";
 const founderImage = "/img/founder3.jpg";
 const sprayImage = "/img/spray1.jpg";
@@ -133,6 +132,7 @@ const featuredProducts = [
 
 function HomePage() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [heroVideoReady, setHeroVideoReady] = useState(false);
 
   useEffect(() => {
     const elements = document.querySelectorAll("[data-reveal]");
@@ -165,13 +165,13 @@ function HomePage() {
       <section className="landing-hero" aria-label="Q.BEAUTY hero">
         <div className="hero-container">
           <video
-            className="hero-media hero-video"
+            className={`hero-media hero-video${heroVideoReady ? " is-ready" : ""}`}
             autoPlay
             muted
             loop
             playsInline
             preload="auto"
-            poster={heroPoster}
+            onPlaying={() => setHeroVideoReady(true)}
             aria-hidden="true"
           >
             <source src={heroVideo} type="video/mp4" />

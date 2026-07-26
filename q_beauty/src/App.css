@@ -115,9 +115,16 @@ img {
 }
 
 .site-nav-brand {
-  font-size: 1.02rem;
-  letter-spacing: .24rem;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.site-nav-brand-mark {
+  display: block;
+  width: auto;
+  height: 28px;
+  object-fit: contain;
 }
 
 .site-nav-links {
@@ -185,11 +192,19 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: fadeInHero 1.8s ease-out forwards;
 }
 
 .hero-video {
   filter: saturate(1.05) contrast(1.02);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.04);
+  transition: opacity .4s ease;
+}
+
+.hero-video.is-ready {
+  visibility: visible;
+  animation: fadeInHero 1.2s ease-out forwards;
 }
 
 .hero-shade {
@@ -204,12 +219,12 @@ img {
 .landing-hero-panel {
   position: relative;
   z-index: 2;
-  width: min(100%, 1080px);
-  padding: 1.1rem 1.15rem 1.2rem;
+  width: min(100%, 760px);
+  padding: .72rem .85rem .82rem;
   margin-inline: 0 auto;
-  margin-bottom: clamp(2rem, 5vh, 3rem);
+  margin-bottom: clamp(1rem, 3vh, 1.7rem);
   border: 1px solid rgba(255, 236, 188, 0.1);
-  border-radius: 28px;
+  border-radius: 24px;
   background:
     linear-gradient(90deg, rgba(8, 8, 8, 0.82) 0%, rgba(8, 8, 8, 0.62) 32%, rgba(8, 8, 8, 0.2) 66%, rgba(8, 8, 8, 0.06) 100%);
   box-shadow:
@@ -221,9 +236,9 @@ img {
 
 .hero-banner-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .72fr);
-  gap: 1.4rem;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, .52fr);
+  gap: .8rem;
+  align-items: center;
 }
 
 .hero-banner-main,
@@ -233,36 +248,36 @@ img {
 }
 
 .hero-kicker {
-  margin: 0 0 1rem;
+  margin: 0 0 .45rem;
   color: rgba(255, 228, 149, 0.92);
-  font-size: 0.92rem;
-  letter-spacing: 0.28rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.18rem;
 }
 
 .hero-title {
   margin: 0;
-  max-width: 10ch;
-  font-size: clamp(2.4rem, 5vw, 4.85rem);
-  line-height: 0.94;
+  max-width: 14ch;
+  font-size: clamp(1.6rem, 2.7vw, 2.95rem);
+  line-height: 0.98;
   color: #fffaf0;
   text-transform: uppercase;
 }
 
 .hero-description {
-  max-width: 31ch;
+  max-width: 23ch;
   margin: 0;
   color: rgba(255, 255, 255, 0.82);
   font-family: "Inter", sans-serif !important;
-  font-size: clamp(0.98rem, 1.35vw, 1.08rem);
-  line-height: 1.66;
+  font-size: clamp(0.84rem, 0.92vw, 0.94rem);
+  line-height: 1.46;
 }
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: .6rem;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 1.75rem;
+  margin-top: .8rem;
 }
 
 /* CTA sopra l’hero */
@@ -307,7 +322,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: .85rem 1.4rem;
+  padding: .72rem 1.1rem;
   border: 1px solid rgba(212, 175, 55, 0.34);
   border-radius: 999px;
   color: #f6e7b0;
@@ -343,7 +358,7 @@ img {
   .landing-hero-panel {
     width: 100%;
     margin-bottom: 1.25rem;
-    padding: 1rem;
+    padding: .9rem;
     text-align: left;
   }
 
@@ -359,7 +374,7 @@ img {
 
   .hero-title {
     max-width: 9.5ch;
-    font-size: clamp(1.9rem, 8.4vw, 3rem);
+    font-size: clamp(1.75rem, 7.6vw, 2.7rem);
   }
 
   .hero-actions {
@@ -414,9 +429,9 @@ section {
 .landing-hero-panel {
   width: 100%;
   margin: 0;
-  padding: 1.05rem 1.15rem 1.15rem;
+  padding: .82rem .9rem .9rem;
   border: 1px solid rgba(255, 236, 188, 0.11);
-  border-radius: 32px;
+  border-radius: 24px;
   background:
     linear-gradient(90deg, rgba(8, 8, 8, 0.86) 0%, rgba(8, 8, 8, 0.64) 34%, rgba(8, 8, 8, 0.24) 72%, rgba(8, 8, 8, 0.06) 100%);
   box-shadow:
@@ -426,12 +441,12 @@ section {
 }
 
 .hero-title {
-  max-width: 9.5ch;
-  font-size: clamp(2.3rem, 4.8vw, 4.55rem);
+  max-width: 14ch;
+  font-size: clamp(1.6rem, 2.6vw, 2.9rem);
 }
 
 .hero-description {
-  max-width: 33ch;
+  max-width: 23ch;
 }
 
 .section-shell {
@@ -1185,30 +1200,66 @@ section {
 
 @media (max-width: 480px) {
   .site-nav-shell {
-    top: 10px;
-    padding: 0 10px;
+    top: 8px;
+    padding: 0 8px;
   }
 
   .site-nav {
-    padding: .8rem .9rem;
-    border-radius: 24px;
+    padding: .7rem .75rem;
+    border-radius: 20px;
     align-items: flex-start;
     flex-direction: column;
+    gap: .55rem;
   }
 
   .site-nav-brand {
-    font-size: .9rem;
-    letter-spacing: .18rem;
+    max-width: 120px;
+  }
+
+  .site-nav-brand-mark {
+    height: 24px;
   }
 
   .site-nav-links {
     width: 100%;
     justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: .1rem;
+    scrollbar-width: none;
+  }
+
+  .site-nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .site-nav-link {
-    padding: .45rem .72rem;
-    font-size: .88rem;
+    padding: .42rem .68rem;
+    font-size: .82rem;
+    white-space: nowrap;
+  }
+
+  .landing-hero {
+    min-height: 92svh;
+    padding: .85rem;
+    padding-top: 5.8rem;
+  }
+
+  .landing-hero-panel {
+    padding: .8rem;
+    border-radius: 22px;
+    background:
+      linear-gradient(180deg, rgba(8, 8, 8, 0.84) 0%, rgba(8, 8, 8, 0.62) 62%, rgba(8, 8, 8, 0.36) 100%);
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: .94rem;
+    line-height: 1.52;
+  }
+
+  .hero-actions {
+    gap: .6rem;
   }
 
   .modal-content {
@@ -1278,8 +1329,9 @@ section {
   }
 
   .section-shell {
-    margin: 0 10px 18px;
-    padding: 1.15rem;
+    margin: 0 8px 16px;
+    padding: 1rem;
+    border-radius: 24px;
   }
 
   .section-heading h2,
@@ -1305,11 +1357,31 @@ section {
   }
 
   .product-showcase-media img {
-    min-height: 250px;
+    min-height: 220px;
   }
 
   .set-step-row {
     grid-template-columns: 1fr;
+  }
+
+  .product-page {
+    padding: 6.2rem 1rem 2.2rem;
+  }
+
+  .product-title {
+    margin-top: 1rem;
+    font-size: 1.55rem;
+  }
+
+  .product-card {
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  .product-details {
+    font-size: 1rem;
+    line-height: 1.58;
   }
 }
 

@@ -8,7 +8,11 @@ function SiteNav({ productMode = false }) {
     <header className="site-nav-shell">
       <nav className="site-nav" aria-label="Navigazione principale">
         <a href={brandHref} className="site-nav-brand">
-          Q.BEAUTY
+          <img
+            src="/apple-touch-icon.png"
+            alt="Q.BEAUTY"
+            className="site-nav-brand-mark"
+          />
         </a>
 
         <div className="site-nav-links">
