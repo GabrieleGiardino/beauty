@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "q-beauty.vercel.app" }],
+      "has": [{ "type": "host", "value": { "suf": ".vercel.app" } }],
       "destination": "https://www.qbeauty.it/:path*",
       "permanent": true
     },
