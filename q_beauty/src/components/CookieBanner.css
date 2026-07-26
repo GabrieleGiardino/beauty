@@ -13,7 +13,7 @@
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 16px;
+    bottom: 10px;
     z-index: 2147483647;
     display: flex;
     justify-content: center;
@@ -85,9 +85,32 @@
   
   /* responsive */
   @media (max-width: 520px){
-    .cookie-card{ padding: 12px; }
-    .cookie-actions{ justify-content: stretch; }
-    .btn{ flex: 1 1 auto; text-align: center; }
-    .cookie-text{ font-size: .95rem; }
+    .cookie-card{
+      width: min(100%, calc(100% - 16px));
+      padding: 10px 12px;
+      border-radius: 14px;
+    }
+
+    .cookie-actions{
+      margin-top: 8px;
+      gap: 8px;
+      justify-content: stretch;
+    }
+
+    .btn{
+      flex: 1 1 auto;
+      padding: 7px 10px;
+      font-size: .82rem;
+      text-align: center;
+    }
+
+    .cookie-text{
+      font-size: .78rem;
+      line-height: 1.28;
+    }
+
+    .cookie-text-secondary{
+      display: none;
+    }
   }
   

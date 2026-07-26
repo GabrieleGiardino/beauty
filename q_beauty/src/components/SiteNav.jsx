@@ -33,7 +33,7 @@ function SiteNav({ productMode = false }) {
             </>
           ) : (
             <>
-              <a href="/#brand" className="site-nav-link">
+              <a href="/#brand" className="site-nav-link site-nav-link-brand">
                 Brand
               </a>
               <a href="/#prodotti" className="site-nav-link">

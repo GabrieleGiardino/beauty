@@ -16,16 +16,16 @@ const qbeautyBg = "/img/qbeauty.jpg";
 
 const brandSignals = [
   {
-    title: "Nata in cabina",
-    text: "Ogni formula risponde a esigenze reali di trattamento, non a una logica puramente estetica.",
+    title: "Dal 2013 sul campo",
+    text: "L'esperienza di Elena tra estetica e onicotecnica parte dal lavoro quotidiano in cabina e dal contatto diretto con il trattamento del piede.",
   },
   {
-    title: "Retail ready",
-    text: "Ogni prodotto lavora bene in cabina ma ha anche una forte capacità di rivendita a fine seduta.",
+    title: "Dal 2020 in formazione",
+    text: "Il percorso da Nail Educator ha trasformato il metodo Q.BEAUTY in una gestualita chiara, insegnabile e riconoscibile anche nei corsi.",
   },
   {
-    title: "Identità forte",
-    text: "Packaging, rituale e percezione sono pensati per far salire il valore del servizio.",
+    title: "Oltre 1.000 corsiste",
+    text: "Insieme alla NAE Academy, Elena ha gia accompagnato piu di mille corsiste in un percorso molto apprezzato da professioniste e centri.",
   },
 ];
 
@@ -125,7 +125,7 @@ const featuredProducts = [
     image: cremaImage,
     alt: "Crema Idratante Cheratolitica",
     description:
-      "Crema con 10% di urea per idratazione profonda ed esfoliazione quotidiana. Aiuta a prevenire ispessimenti, secchezza e cattivi odori con una texture premium.",
+      "Crema con 10% di urea per idratazione profonda ed esfoliazione quotidiana. Aiuta a prevenire ispessimenti, secchezza e cattivi odori con una texture leggera e confortevole.",
     accent: "100 ml · +90% ingredienti di origine naturale · Uso domiciliare ideale",
   },
 ];
@@ -195,8 +195,8 @@ function HomePage() {
 
               <div className="hero-banner-side">
                 <p className="hero-description">
-                  Formule professionali, immaginario premium e un rituale studiato
-                  per far percepire piu valore in cabina, prima ancora del risultato finale.
+                  Formule professionali, immagine curata e un rituale pensato
+                  per dare piu spessore al trattamento gia dal primo sguardo.
                 </p>
 
                 <div className="hero-actions">
@@ -219,8 +219,8 @@ function HomePage() {
             <p className="section-eyebrow">IL BRAND</p>
             <h2>Una linea nata sul campo, costruita per distinguersi.</h2>
             <p className="section-lead">
-              Q.BEAUTY non e una semplice linea piedi: e un linguaggio visivo,
-              un protocollo di lavoro e una proposta retail completa.
+              Q.BEAUTY non e una semplice linea piedi: e un metodo di cabina,
+              un'identita visiva precisa e una proposta coerente dal trattamento al consiglio finale.
             </p>
           </div>
 
@@ -248,9 +248,10 @@ function HomePage() {
                   Elena Santucci
                 </a>
                 , onicotecnica ed estetista dal 2013, Nail Educator dal 2020.
-                Dopo anni di lavoro in cabina e ricerca sul trattamento professionale
-                nasce Q.BEAUTY: una linea ad alto impatto tecnico ed estetico,
-                pensata per portare la pedicure a un livello piu alto.
+                Dopo anni di lavoro in cabina, ricerca sul trattamento professionale
+                e oltre mille corsiste formate insieme alla NAE Academy,
+                nasce Q.BEAUTY: una linea pensata per dare alla pedicure
+                una presenza piu autorevole, ordinata e riconoscibile.
               </p>
 
               <div className="signal-grid">
@@ -292,16 +293,16 @@ function HomePage() {
                     rel="noopener noreferrer"
                     className="inline-gold-link"
                   >
-                    Elena Santucci
-                  </a>
-                  , onicotecnica ed estetista dal 2013, Nail Educator dal 2020 con
-                  piu di mille corsiste formate insieme alla NAE Academy. Nonostante
-                  le mani siano la mia piu grande passione, tutto cio che riguarda la
-                  cura del piede e sempre stato parte fondamentale della mia carriera.
-                  Dopo anni di lavoro sul campo e mesi di ricerca e sviluppo nasce
-                  Q.BEAUTY: una linea dedicata alla pedicure professionale,
-                  qualitativamente alta ed esteticamente d’impatto.
-                </p>
+                  Elena Santucci
+                </a>
+                , onicotecnica ed estetista dal 2013, Nail Educator dal 2020 con
+                piu di mille corsiste formate insieme alla NAE Academy. Nonostante
+                le mani siano la mia piu grande passione, tutto cio che riguarda la
+                cura del piede e sempre stato parte fondamentale della mia carriera.
+                Dopo anni di lavoro sul campo e mesi di ricerca e sviluppo nasce
+                Q.BEAUTY: una linea dedicata alla pedicure professionale,
+                pensata per rendere il trattamento piu leggibile, piu curato e piu memorabile.
+              </p>
                 <button onClick={() => setModalOpen(false)}>Chiudi</button>
               </div>
             </div>
@@ -313,8 +314,8 @@ function HomePage() {
             <p className="section-eyebrow">IL RITUALE</p>
             <h2>Tre step, una percezione diversa del trattamento.</h2>
             <p className="section-lead">
-              Lo shop parla chiaro: ogni prodotto ha una funzione forte, ma il valore vero
-              nasce quando li fai vivere come un protocollo riconoscibile.
+              Nello shop ogni prodotto racconta la propria funzione; qui prende
+              forma un percorso coerente, facile da spiegare e immediato da proporre in cabina.
             </p>
           </div>
 
@@ -337,10 +338,10 @@ function HomePage() {
         <section className="section-shell gallery" id="prodotti">
           <div className="section-heading reveal-card" data-reveal>
             <p className="section-eyebrow">COLLEZIONE</p>
-            <h2>Descrizioni ufficiali, presentazione premium.</h2>
+            <h2>Descrizioni ufficiali, racconto piu curato.</h2>
             <p className="section-lead">
-              Ogni card riporta l’anima del prodotto come viene raccontata nello shop
-              ufficiale, ma in una veste piu editoriale e tridimensionale.
+              Ogni card riprende il contenuto del sito ufficiale e lo accompagna
+              con una lettura piu chiara, visiva e coerente con l'identita del brand.
             </p>
           </div>
 
@@ -352,8 +353,8 @@ function HomePage() {
                 className="product-showcase-card reveal-card"
                 data-reveal
                 style={{ "--reveal-delay": `${60 + index * 90}ms` }}
-                aria-label={`Apri la presentazione di ${product.name}`}
-                title={`Apri la presentazione di ${product.name}`}
+                aria-label={`Scopri il prodotto ${product.name}`}
+                title={`Scopri il prodotto ${product.name}`}
               >
                 <div className="product-showcase-media">
                   <img src={product.image} alt={product.alt} />
@@ -364,7 +365,7 @@ function HomePage() {
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
                   <span className="product-accent">{product.accent}</span>
-                  <span className="product-link">Apri presentazione</span>
+                  <span className="product-link">Scopri prodotto</span>
                 </div>
               </Link>
             ))}
@@ -384,8 +385,8 @@ function HomePage() {
               <h2>Il protocollo completo in un’unica proposta.</h2>
               <p className="section-lead">
                 Nello shop viene descritto in modo semplice: Spray igienizzante,
-                Burro emolliente, Crema idratante cheratolitica. Nel sito lo trasformiamo
-                in un vero sistema di trattamento.
+                Burro emolliente, Crema idratante cheratolitica. Qui prende
+                la forma di un percorso ordinato, leggibile e pronto da raccontare.
               </p>
 
               <div className="set-step-row">
@@ -463,7 +464,7 @@ function HomePage() {
             <h2>Richiedi informazioni o listino.</h2>
             <p className="section-lead">
               Se vuoi entrare nel mondo Q.BEAUTY come cliente, rivenditore o professionista,
-              qui ti lasciamo un contatto diretto, chiaro e premium anche nella forma.
+              qui trovi un contatto diretto, ordinato e coerente con l'identita del brand.
             </p>
             <div className="form-card contact-form-shell">
               <ContactForm />
