@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { QB_SHOP_URLS } from "../shopLinks";
 
 function SiteNav({ productMode = false }) {
   const brandHref = productMode ? "/#prodotti" : "/";
@@ -17,17 +17,14 @@ function SiteNav({ productMode = false }) {
               <a href="/#prodotti" className="site-nav-link">
                 Prodotti
               </a>
-              <Link to="/set" className="site-nav-link">
-                Protocollo
-              </Link>
+              <a href={QB_SHOP_URLS.shop} className="site-nav-link">
+                Shop
+              </a>
               <a href="/#contatti" className="site-nav-link">
                 Contatti
               </a>
               <a href="/#faq" className="site-nav-link">
                 FAQ
-              </a>
-              <a href="/" className="site-nav-link">
-                Home
               </a>
             </>
           ) : (
@@ -38,9 +35,9 @@ function SiteNav({ productMode = false }) {
               <a href="/#prodotti" className="site-nav-link">
                 Prodotti
               </a>
-              <Link to="/set" className="site-nav-link">
-                Protocollo
-              </Link>
+              <a href={QB_SHOP_URLS.shop} className="site-nav-link">
+                Shop
+              </a>
               <a href="/#faq" className="site-nav-link">
                 FAQ
               </a>

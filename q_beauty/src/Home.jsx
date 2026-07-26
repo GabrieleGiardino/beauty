@@ -203,9 +203,9 @@ function HomePage() {
                   <a href="#prodotti" className="cta-button">
                     Esplora la collezione
                   </a>
-                  <Link to="/set" className="hero-secondary-button">
-                    Scopri il protocollo
-                  </Link>
+                  <a href={QB_SHOP_URLS.shop} className="hero-secondary-button">
+                    Shop
+                  </a>
                 </div>
               </div>
             </div>
@@ -434,6 +434,12 @@ function HomePage() {
                   <p>{item.answer}</p>
                 </details>
               ))}
+            </div>
+
+            <div className="hero-actions">
+              <a href={QB_SHOP_URLS.shop} className="cta-button">
+                Vai allo shop
+              </a>
             </div>
 
             <a
