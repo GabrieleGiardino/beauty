@@ -1,12 +1,14 @@
 // src/prodotti/Spray.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../App.css';
+import SiteNav from '../components/SiteNav';
 import { QB_SHOP_URLS } from '../shopLinks';
 
 function Spray() {
   return (
     <main className="product-page">
+      <SiteNav productMode />
+
       <h1 className="product-title">Spray Igienizzante</h1>
 
       <div className="product-card">
@@ -60,9 +62,9 @@ function Spray() {
         </div>
       </div>
 
-      <Link to="/home" className="cta-button" style={{ display: 'inline-block', marginTop: '2rem' }}>
-        ← Torna alla Home
-      </Link>
+      <a href="/#prodotti" className="cta-button" style={{ display: 'inline-block', marginTop: '2rem' }}>
+        ← Torna ai Prodotti
+      </a>
     </main>
   );
 }

@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../App.css";
+import SiteNav from "../components/SiteNav";
 import { QB_SHOP_URLS } from "../shopLinks";
 
 function Kerato5() {
   return (
     <main className="product-page">
+      <SiteNav productMode />
+
       <h1 className="product-title">KERATO5</h1>
 
       <div className="product-card">
@@ -42,13 +44,13 @@ function Kerato5() {
             </a>
           </div>
 
-          <Link
-            to="/home"
+          <a
+            href="/#prodotti"
             className="cta-button"
             style={{ marginTop: "1.5rem", display: "inline-block" }}
           >
             ← Torna ai Prodotti
-          </Link>
+          </a>
         </div>
       </div>
     </main>

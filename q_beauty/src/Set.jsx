@@ -1,7 +1,7 @@
 // src/Set.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './App.css'; // Stili globali
+import SiteNav from './components/SiteNav';
 import { QB_SHOP_URLS } from './shopLinks';
 
 // ✅ immagine servita da /public/img
@@ -10,6 +10,8 @@ const beautySetImage = '/img/beauty_set.png';
 function SetPage() {
   return (
     <div className="product-page">
+      <SiteNav productMode />
+
       <h1 className="product-title">Set Experience Q•BEAUTY</h1>
 
       <div className="product-card">
@@ -48,9 +50,9 @@ function SetPage() {
             </a>
           </div>
 
-          <Link to="/home" className="cta-button" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+          <a href="/#prodotti" className="cta-button" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
             ← Torna ai Prodotti
-          </Link>
+          </a>
         </div>
       </div>
     </div>

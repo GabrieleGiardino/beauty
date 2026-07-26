@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import App from "./App";              // Hero iniziale con bottone "Scopri i nostri prodotti"
-import HomePage from "./Home";        // Pagina con Fondatrice, Prodotti, Set, Contatti, ecc
+import App from "./App";              // Homepage completa con hero video + contenuto
 import Landing from "./Landing";      // Landing rivenditori (DIVENTA RIVENDITORE Q•BEAUTY)
 
 import Articolo1 from "./articoli/Articolo1";
@@ -33,14 +32,14 @@ root.render(
       <CookieBanner />
 
       <Routes>
-        {/* Homepage principale (hero con CTA "Scopri i nostri prodotti") */}
+        {/* Homepage principale: hero video + fondatrice, prodotti, set e contatti */}
         <Route path="/" element={<App />} />
 
-        {/* Pagina interna con fondatrice, prodotti, set, instagram, form, ecc. */}
-        <Route path="/home" element={<HomePage />} />
+        {/* Alias storico: ora tutto converge sulla homepage reale */}
+        <Route path="/home" element={<Navigate to="/" replace />} />
 
-        {/* Redirect da /Home (maiuscolo) a /home (minuscolo) */}
-        <Route path="/Home" element={<Navigate to="/home" replace />} />
+        {/* Redirect da /Home (maiuscolo) alla homepage */}
+        <Route path="/Home" element={<Navigate to="/" replace />} />
 
         {/* Landing rivenditori: qbeauty.it/rivenditori */}
         <Route path="/rivenditori" element={<Landing />} />

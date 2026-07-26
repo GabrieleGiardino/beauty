@@ -64,7 +64,7 @@ function Landing() {
               </div>
 
               {/* CTA: ora porta al form della home */}
-              <a className="lp-buy-btn" href="/home#contatti">
+              <a className="lp-buy-btn" href="/#contatti">
                 Richiedi listino rivenditori
               </a>
             </div>
