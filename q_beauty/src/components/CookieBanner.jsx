@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { applyAnalyticsConsent, CONSENT_EVENT } from "../lib/analytics";
 import "./CookieBanner.css";
 
 const KEY = "q_consent"; // memorizzato in sessionStorage
@@ -21,10 +22,14 @@ export default function CookieBanner() {
 
   const accept = () => {
     sessionStorage.setItem(KEY, "accepted");
+    applyAnalyticsConsent("accepted");
+    window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: "accepted" }));
     setVisible(false);
   };
   const reject = () => {
     sessionStorage.setItem(KEY, "rejected");
+    applyAnalyticsConsent("rejected");
+    window.dispatchEvent(new CustomEvent(CONSENT_EVENT, { detail: "rejected" }));
     setVisible(false);
   };
 

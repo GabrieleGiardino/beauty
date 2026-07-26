@@ -14,6 +14,7 @@ import Spray from "./prodotti/Spray";
 import SetPage from "./Set";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 import PrivacyPolicy from "./PrivacyPolicy";
 
 import "./index.css";
@@ -26,6 +27,8 @@ root.render(
     <BrowserRouter>
       {/* Scroll automatico in alto al cambio pagina */}
       <ScrollToTop />
+      {/* Tracciamento GA4 solo dopo consenso */}
+      <AnalyticsTracker />
       {/* Banner cookie globale */}
       <CookieBanner />
 

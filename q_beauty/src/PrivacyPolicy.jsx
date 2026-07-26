@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
     <main className="policy">
       <h1>Privacy Policy</h1>
       <p className="policy__meta">
-        <em>Ultimo aggiornamento: 04/09/2025</em>
+        <em>Ultimo aggiornamento: 26/07/2026</em>
       </p>
 
       <h2>1) Titolare del trattamento</h2>
@@ -170,20 +170,32 @@ export default function PrivacyPolicy() {
           <tr>
             <td data-th="Nome"><code>q_consent</code></td>
             <td data-th="Finalità">
-              Memorizza la scelta dell’utente in merito ai cookie (accetta/rifiuta).
+              Memorizza in sessione la scelta dell’utente in merito ai cookie
+              (accetta/rifiuta).
             </td>
-            <td data-th="Durata">fino a 6 mesi</td>
+            <td data-th="Durata">Sessione di navigazione</td>
             <td data-th="Tipologia">Tecnico (necessario)</td>
             <td data-th="Provenienza">Prima parte</td>
           </tr>
           <tr>
-            <td data-th="Nome"><code>q_cookie_banner</code></td>
+            <td data-th="Nome"><code>_ga</code></td>
             <td data-th="Finalità">
-              Evita di riproporre il banner dopo la chiusura o la scelta effettuata.
+              Google Analytics 4: distingue utenti unici e supporta la misurazione
+              aggregata del traffico del sito.
             </td>
-            <td data-th="Durata">7–30 giorni</td>
-            <td data-th="Tipologia">Tecnico (necessario)</td>
-            <td data-th="Provenienza">Prima parte</td>
+            <td data-th="Durata">Fino a 2 anni</td>
+            <td data-th="Tipologia">Analytics facoltativo</td>
+            <td data-th="Provenienza">Google Analytics 4 / Prima parte</td>
+          </tr>
+          <tr>
+            <td data-th="Nome"><code>_ga_&lt;container-id&gt;</code></td>
+            <td data-th="Finalità">
+              Google Analytics 4: mantiene lo stato della sessione e associa gli
+              eventi allo stream di misurazione del sito.
+            </td>
+            <td data-th="Durata">Fino a 2 anni</td>
+            <td data-th="Tipologia">Analytics facoltativo</td>
+            <td data-th="Provenienza">Google Analytics 4 / Prima parte</td>
           </tr>
         </tbody>
       </table>
