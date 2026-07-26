@@ -8,11 +8,38 @@ import ContactForm from './components/ContactForm';
 
 // ✅ immagini servite da /public/img (niente import)
 const founderImage = '/img/founder3.jpg';
-const sprayImage   = '/img/spray1.jpg';
-const burroImage   = '/img/burro_emoliente.jpg';
-const cremaImage   = '/img/crema_piedi.jpg';
-const setImage     = '/img/beauty_set.png';
-const qbeautyBg    = '/img/qbeauty.jpg';
+const sprayImage = '/img/spray1.jpg';
+const burroImage = '/img/burro_emoliente.jpg';
+const cremaImage = '/img/crema_piedi.jpg';
+const setImage = '/img/beauty_set.png';
+const qbeautyBg = '/img/qbeauty.jpg';
+
+const featuredProducts = [
+  {
+    name: 'KERATO5',
+    href: '/prodotti/Kerato5',
+    image: 'https://cdn.qbeautyshop.it/kerato5/kerato5-1.jpg',
+    alt: 'KERATO5',
+  },
+  {
+    name: 'Spray Igienizzante',
+    href: '/prodotti/Spray',
+    image: sprayImage,
+    alt: 'Spray Igienizzante',
+  },
+  {
+    name: 'Burro Emolliente',
+    href: '/prodotti/Olio',
+    image: burroImage,
+    alt: 'Burro Emolliente',
+  },
+  {
+    name: 'Crema Idratante Cheratolitica',
+    href: '/prodotti/Siero',
+    image: cremaImage,
+    alt: 'Crema Idratante Cheratolitica',
+  },
+];
 
 function HomePage() {
   const [loaded, setLoaded] = useState(false);
@@ -73,15 +100,18 @@ function HomePage() {
         <section className={`gallery ${loaded ? 'visible' : ''}`} id="prodotti">
           <h2>Prodotti</h2>
           <div className="products">
-            <Link to="/prodotti/Spray">
-              <img src={sprayImage} alt="Spray Igienizzante" />
-            </Link>
-            <Link to="/prodotti/Olio">
-              <img src={burroImage} alt="Burro Emolliente" />
-            </Link>
-            <Link to="/prodotti/Siero">
-              <img src={cremaImage} alt="Crema Piedi" />
-            </Link>
+            {featuredProducts.map((product) => (
+              <Link
+                key={product.name}
+                to={product.href}
+                className="featured-product-card"
+                aria-label={`Apri la presentazione di ${product.name}`}
+                title={`Apri la presentazione di ${product.name}`}
+              >
+                <img src={product.image} alt={product.alt} />
+                <span className="featured-product-name">{product.name}</span>
+              </Link>
+            ))}
           </div>
         </section>
 
@@ -89,9 +119,14 @@ function HomePage() {
         <section className="set-section">
           <h2>Set</h2>
           <p>Scopri il nostro set esclusivo per un trattamento completo Q•BEAUTY.</p>
-          <Link to="/set">
-            <img src={setImage} alt="Set QBeauty" className="set-image" />
+          <Link to="/set" aria-label="Apri la presentazione del Set Experience Q•BEAUTY">
+            <img src={setImage} alt="Set Experience Q•BEAUTY" className="set-image" />
           </Link>
+          <div style={{ marginTop: '1.5rem' }}>
+            <Link to="/set" className="cta-button">
+              Scopri il set
+            </Link>
+          </div>
         </section>
 
         {/* Contatti Instagram */}
@@ -127,12 +162,12 @@ function HomePage() {
           <p>
             © {new Date().getFullYear()} Tutti i diritti riservati – Realizzato da{' '}
             <a
-              href="https://sorted-beryl.vercel.app/"
+              href="https://sortedbros.com"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: '#ffcc00', fontWeight: 'bold', textDecoration: 'bold' }}
             >
-              Sorted
+              Sorted Bros
             </a>
           </p>
         </footer>

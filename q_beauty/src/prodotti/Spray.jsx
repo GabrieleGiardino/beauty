@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import { QB_SHOP_URLS } from '../shopLinks';
 
 function Spray() {
   return (
@@ -49,6 +50,12 @@ function Spray() {
             <p><strong>💰 Prezzo:</strong> € 17,90</p>
             <p>🔹 <strong>-10%</strong> sul primo acquisto → <strong>€ 16</strong></p>
             <p>🔹 <strong>-15%</strong> FISSO per le P. IVA → <strong>€ 15 IVA incl.</strong></p>
+          </div>
+
+          <div style={{ marginTop: '1.5rem' }}>
+            <a href={QB_SHOP_URLS.spray} className="cta-button">
+              Acquista sullo shop
+            </a>
           </div>
         </div>
       </div>

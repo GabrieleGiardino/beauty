@@ -1,4 +1,19 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "q-beauty.vercel.app" }],
+      "destination": "https://www.qbeauty.it/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "qbeauty.it" }],
+      "destination": "https://www.qbeauty.it/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/sitemap.xml",

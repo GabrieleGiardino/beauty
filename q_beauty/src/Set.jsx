@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './App.css'; // Stili globali
+import { QB_SHOP_URLS } from './shopLinks';
 
 // ✅ immagine servita da /public/img
 const beautySetImage = '/img/beauty_set.png';
@@ -9,7 +10,7 @@ const beautySetImage = '/img/beauty_set.png';
 function SetPage() {
   return (
     <div className="product-page">
-      <h1 className="product-title">Set Q•BEAUTY</h1>
+      <h1 className="product-title">Set Experience Q•BEAUTY</h1>
 
       <div className="product-card">
         <div className="product-image">
@@ -23,7 +24,7 @@ function SetPage() {
           <ul>
             <li>Spray Igienizzante</li>
             <li>Burro Emolliente</li>
-            <li>Crema Piedi Idratante</li>
+            <li>Crema Idratante Cheratolitica</li>
           </ul>
           <p>
             Offri alla tua clientela un servizio pedicure completo firmato Q•BEAUTY
@@ -39,6 +40,12 @@ function SetPage() {
               <del style={{ color: '#ccc', marginRight: '8px' }}>€ 67,70</del>
               <span style={{ fontWeight: 'bold' }}>€ 54,00</span>
             </p>
+          </div>
+
+          <div style={{ marginTop: '1.5rem' }}>
+            <a href={QB_SHOP_URLS.set} className="cta-button">
+              Acquista sullo shop
+            </a>
           </div>
 
           <Link to="/home" className="cta-button" style={{ marginTop: '1.5rem', display: 'inline-block' }}>

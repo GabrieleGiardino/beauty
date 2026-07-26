@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import { QB_SHOP_URLS } from "../shopLinks";
 
 function ProdottoOlio() {
   return (
@@ -51,6 +52,12 @@ function ProdottoOlio() {
             <p><strong>💰 Prezzo:</strong> € 24,90</p>
             <p>🔹 <strong>-10%</strong> sul primo acquisto → <strong>€ 22,40</strong></p>
             <p>🔹 <strong>-15%</strong> FISSO per le P. IVA → <strong>€ 21 IVA incl.</strong></p>
+          </div>
+
+          <div style={{ marginTop: "1.5rem" }}>
+            <a href={QB_SHOP_URLS.burro} className="cta-button">
+              Acquista sullo shop
+            </a>
           </div>
         </div>
       </div>

@@ -2,16 +2,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import { QB_SHOP_URLS } from '../shopLinks';
 
 function Siero() {
   return (
     <main className="product-page">
-      <h1 className="product-title">Crema piedi idratante</h1>
+      <h1 className="product-title">Crema Idratante Cheratolitica</h1>
 
       <div className="product-card">
         <div className="product-image">
           {/* immagini dal public */}
-          <img src="/img/crema_piedi.jpg" alt="Crema Piedi Idratante" />
+          <img src="/img/crema_piedi.jpg" alt="Crema Idratante Cheratolitica" />
           <img
             src="/img/img_5511.jpg"
             alt="Applicazione crema piedi"
@@ -21,7 +22,7 @@ function Siero() {
 
         <div className="product-details">
           <p>
-            Il terzo prodotto della linea <strong>Q.BEAUTY</strong> è la crema piedi idratante e cheratolitica con 10% di urea, perfetta per chiudere in bellezza il trattamento o per un’idratazione quotidiana del piede.
+            Il terzo prodotto della linea <strong>Q.BEAUTY</strong> è la crema idratante e cheratolitica con 10% di urea, perfetta per chiudere in bellezza il trattamento o per un’idratazione quotidiana del piede.
           </p>
 
           <ul>
@@ -55,6 +56,12 @@ function Siero() {
             <p><strong>💰 Prezzo:</strong> € 24,90</p>
             <p>🔹 <strong>-10%</strong> sul primo acquisto → <strong>€ 22,40</strong></p>
             <p>🔹 <strong>-15%</strong> FISSO per le P. IVA → <strong>€ 21,00  IVA incl.</strong></p>
+          </div>
+
+          <div style={{ marginTop: '1.5rem' }}>
+            <a href={QB_SHOP_URLS.crema} className="cta-button">
+              Acquista sullo shop
+            </a>
           </div>
         </div>
       </div>

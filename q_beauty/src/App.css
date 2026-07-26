@@ -171,18 +171,36 @@ section { padding: 40px 20px; }
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
   gap: 1.5rem;
   position: relative;
   z-index: 1;
 }
 
+.products a {
+  width: min(100%, 220px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
 .products img {
-  width: 200px;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(212, 175, 55, .2);
   transition: transform .3s ease;
 }
-.products img:hover { transform: scale(1.05); }
+.products a:hover img { transform: scale(1.05); }
+
+.featured-product-name {
+  color: var(--gold);
+  font-size: 1.1rem;
+  letter-spacing: 0.4px;
+}
 
 /* Contatti (Instagram) */
 .contact p {
@@ -583,9 +601,8 @@ section { padding: 40px 20px; }
     padding: 1rem;
   }
 
-  .products img {
-    width: 90%;
-    margin: 0 auto;
+  .products a {
+    width: min(100%, 320px);
   }
 
   .cta-overlay h1 {
@@ -664,9 +681,8 @@ section { padding: 40px 20px; }
     padding: 1rem;
   }
 
-  .products img {
-    width: 70%;
-    margin: 0 auto;
+  .products a {
+    width: min(100%, 240px);
   }
 
   .cta-overlay {

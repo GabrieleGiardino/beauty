@@ -1,7 +1,7 @@
 // src/BlackFridayBanner.jsx
 import React from "react";
-import { Link } from "react-router-dom";
 import "./BlackFriday.css";
+import { QB_SHOP_URLS } from "./shopLinks";
 
 // Piccola icona Instagram in SVG
 function InstagramIcon() {
@@ -41,7 +41,7 @@ const bfProducts = [
     oldPrice: "€17,90",
     newPrice: "€14,30",
     discount: "-20%",
-    link: "/prodotti/Spray",
+    link: QB_SHOP_URLS.spray,
     img: "/img/spray1.jpg",
   },
   {
@@ -52,17 +52,17 @@ const bfProducts = [
     newPrice: "€19,90",
     discount: "-20%",
     highlight: true,
-    link: "/prodotti/Olio",
+    link: QB_SHOP_URLS.burro,
     img: "/img/burro_emoliente.jpg",
   },
   {
-    name: "Crema Piedi",
+    name: "Crema Idratante Cheratolitica",
     desc:
       "Step 3 · Idrata in profondità ed esfolia la pelle, perfetta chiusura del trattamento e come trattamento domiciliare",
     oldPrice: "€24,90",
     newPrice: "€19,90",
     discount: "-20%",
-    link: "/prodotti/Siero",
+    link: QB_SHOP_URLS.crema,
     img: "/img/crema_piedi.jpg",
   },
 ];
@@ -115,9 +115,9 @@ function BlackFridayBanner() {
                 <span className="bf-card__new">{p.newPrice}</span>
               </div>
 
-              <Link to={p.link} className="bf-card__btn">
-                Vedi dettagli
-              </Link>
+              <a href={p.link} className="bf-card__btn">
+                Acquista sullo shop
+              </a>
             </article>
           ))}
         </div>
