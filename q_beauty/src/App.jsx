@@ -17,13 +17,15 @@ function App() {
               className="hero-img"
             />
 
-            <div className="cta-overlay">
-              <p className="hero-kicker">Q.BEAUTY</p>
-              <h1 className="hero-title">Your Pedicure Experience</h1>
-              <p className="hero-copy">
+            <div className="visually-hidden">
+              <h1>Q.BEAUTY - Your Pedicure Experience</h1>
+              <p>
                 Linea professionale per pedicure pensata per trattamento,
                 rituale e risultato.
               </p>
+            </div>
+
+            <div className="cta-overlay">
               <Link to="/home" className="cta-button">
                 Scopri i nostri prodotti →
               </Link>
