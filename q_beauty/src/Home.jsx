@@ -7,6 +7,7 @@ import SiteNav from "./components/SiteNav";
 import { QB_SHOP_URLS } from "./shopLinks";
 
 const heroVideo = "/video/hero-qbeauty.mp4";
+const heroPoster = "/video/hero-qbeauty-poster.jpg";
 const founderImage = "/img/founder3.jpg";
 const sprayImage = "/img/spray1.jpg";
 const burroImage = "/img/burro_emoliente.jpg";
@@ -171,6 +172,7 @@ function HomePage() {
             loop
             playsInline
             preload="auto"
+            poster={heroPoster}
             onPlaying={() => setHeroVideoReady(true)}
             aria-hidden="true"
           >
@@ -185,28 +187,23 @@ function HomePage() {
             data-reveal
             style={{ "--reveal-delay": "40ms" }}
           >
-            <div className="hero-banner-layout">
-              <div className="hero-banner-main">
-                <p className="hero-kicker">Q.BEAUTY PROFESSIONAL PEDICURE</p>
-                <h1 className="hero-title">
-                  La pedicure si trasforma in progetto.
-                </h1>
-              </div>
+            <div className="hero-copy-stack">
+              <p className="hero-kicker">Q.BEAUTY PROFESSIONAL PEDICURE</p>
+              <h1 className="hero-title">
+                La pedicure si trasforma in progetto.
+              </h1>
+              <p className="hero-description">
+                Formule professionali, immagine curata e un rituale pensato
+                per dare piu spessore al trattamento gia dal primo sguardo.
+              </p>
 
-              <div className="hero-banner-side">
-                <p className="hero-description">
-                  Formule professionali, immagine curata e un rituale pensato
-                  per dare piu spessore al trattamento gia dal primo sguardo.
-                </p>
-
-                <div className="hero-actions">
-                  <a href="#prodotti" className="cta-button">
-                    Esplora la collezione
-                  </a>
-                  <a href={QB_SHOP_URLS.shop} className="hero-secondary-button">
-                    Shop
-                  </a>
-                </div>
+              <div className="hero-actions">
+                <a href="#prodotti" className="cta-button">
+                  Esplora la collezione
+                </a>
+                <a href={QB_SHOP_URLS.shop} className="hero-secondary-button">
+                  Shop
+                </a>
               </div>
             </div>
           </div>

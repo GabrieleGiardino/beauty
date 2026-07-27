@@ -37,12 +37,10 @@ export default function CookieBanner() {
     <div className="cookie-bar" role="dialog" aria-live="polite" aria-label="Informativa sui cookie">
       <div className="cookie-card" role="document">
         <p className="cookie-text" style={{ marginBottom: 4 }}>
-          Usiamo <strong>cookie tecnici</strong> e, solo con il tuo consenso,
-          <strong> misurazione anonima</strong>. <strong>Nessuna profilazione.</strong>{" "}
+          <strong>Cookie tecnici</strong> sempre attivi.{" "}
+          <strong>Misurazione anonima</strong> solo con consenso.{" "}
+          <strong>Nessuna profilazione.</strong>{" "}
           <Link to="/privacy-policy#cookie" className="cookie-link">Privacy Policy</Link>.
-        </p>
-        <p className="cookie-text cookie-text-secondary" style={{ fontSize: ".9rem", opacity: 0.9, margin: 0 }}>
-          Puoi rifiutare: il sito funziona comunque.
         </p>
 
         <div className="cookie-actions">
