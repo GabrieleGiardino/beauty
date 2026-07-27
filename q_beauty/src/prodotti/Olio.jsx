@@ -13,12 +13,11 @@ function ProdottoOlio() {
 
       <div className="product-card">
         <div className="product-image">
-          {/* dal public */}
           <img src="/img/burro_emoliente.jpg" alt="Burro Emolliente" />
           <img
             src="/img/img_5514.jpg"
             alt="Burro Emolliente Q.BEAUTY"
-            style={{ marginTop: "1rem", borderRadius: "10px", maxWidth: "100%" }}
+            className="product-secondary-image"
           />
         </div>
 
@@ -50,13 +49,13 @@ function ProdottoOlio() {
             <li>Vegan 🌿</li>
             <li>76% ingredienti di origine naturale 🌱</li>
           </ul>
-          <div style={{ marginTop: "2rem", fontSize: "1.3rem", lineHeight: "1.6" }}>
+          <div className="product-price-block">
             <p><strong>💰 Prezzo:</strong> € 24,90</p>
             <p>🔹 <strong>-10%</strong> sul primo acquisto → <strong>€ 22,40</strong></p>
             <p>🔹 <strong>-15%</strong> FISSO per le P. IVA → <strong>€ 21 IVA incl.</strong></p>
           </div>
 
-          <div style={{ marginTop: "1.5rem" }}>
+          <div className="product-buy-action">
             <a href={QB_SHOP_URLS.burro} className="cta-button">
               Acquista sullo shop
             </a>
@@ -64,7 +63,7 @@ function ProdottoOlio() {
         </div>
       </div>
 
-      <a href="/#prodotti" className="cta-button" style={{ display: "inline-block", marginTop: "2rem" }}>
+      <a href="/#prodotti" className="cta-button product-return-button" style={{ marginTop: "2rem" }}>
         ← Torna ai Prodotti
       </a>
     </main>

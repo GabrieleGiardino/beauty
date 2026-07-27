@@ -13,12 +13,11 @@ function Spray() {
 
       <div className="product-card">
         <div className="product-image">
-          {/* immagini dal public */}
           <img src="/img/spray1.jpg" alt="Spray Igienizzante" />
           <img
             src="/img/img_5505.jpg"
             alt="Uso dello spray sui piedi"
-            style={{ marginTop: '1rem', borderRadius: '10px', maxWidth: '100%' }}
+            className="product-secondary-image"
           />
         </div>
 
@@ -48,13 +47,13 @@ function Spray() {
             <li>76% di ingredienti di origine naturale 🌿</li>
           </ul>
 
-          <div style={{ marginTop: '2rem', fontSize: '1.3rem', lineHeight: '1.6' }}>
+          <div className="product-price-block">
             <p><strong>💰 Prezzo:</strong> € 17,90</p>
             <p>🔹 <strong>-10%</strong> sul primo acquisto → <strong>€ 16</strong></p>
             <p>🔹 <strong>-15%</strong> FISSO per le P. IVA → <strong>€ 15 IVA incl.</strong></p>
           </div>
 
-          <div style={{ marginTop: '1.5rem' }}>
+          <div className="product-buy-action">
             <a href={QB_SHOP_URLS.spray} className="cta-button">
               Acquista sullo shop
             </a>
@@ -62,7 +61,7 @@ function Spray() {
         </div>
       </div>
 
-      <a href="/#prodotti" className="cta-button" style={{ display: 'inline-block', marginTop: '2rem' }}>
+      <a href="/#prodotti" className="cta-button product-return-button" style={{ marginTop: '2rem' }}>
         ← Torna ai Prodotti
       </a>
     </main>

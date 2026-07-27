@@ -13,12 +13,11 @@ function Siero() {
 
       <div className="product-card">
         <div className="product-image">
-          {/* immagini dal public */}
           <img src="/img/crema_piedi.jpg" alt="Crema Idratante Cheratolitica" />
           <img
             src="/img/img_5511.jpg"
             alt="Applicazione crema piedi"
-            style={{ marginTop: '1rem', borderRadius: '10px', maxWidth: '100%' }}
+            className="product-secondary-image"
           />
         </div>
 
@@ -54,13 +53,13 @@ function Siero() {
             <li>+90% di ingredienti di origine naturale 🌿</li>
           </ul>
 
-          <div style={{ marginTop: '2rem', fontSize: '1.3rem', lineHeight: '1.6' }}>
+          <div className="product-price-block">
             <p><strong>💰 Prezzo:</strong> € 24,90</p>
             <p>🔹 <strong>-10%</strong> sul primo acquisto → <strong>€ 22,40</strong></p>
             <p>🔹 <strong>-15%</strong> FISSO per le P. IVA → <strong>€ 21,00  IVA incl.</strong></p>
           </div>
 
-          <div style={{ marginTop: '1.5rem' }}>
+          <div className="product-buy-action">
             <a href={QB_SHOP_URLS.crema} className="cta-button">
               Acquista sullo shop
             </a>
@@ -68,7 +67,7 @@ function Siero() {
         </div>
       </div>
 
-      <a href="/#prodotti" className="cta-button" style={{ display: 'inline-block', marginTop: '2rem' }}>
+      <a href="/#prodotti" className="cta-button product-return-button" style={{ marginTop: '2rem' }}>
         ← Torna ai Prodotti
       </a>
     </main>

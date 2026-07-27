@@ -31,7 +31,7 @@ function SetPage() {
           <p>
             Offri alla tua clientela un servizio pedicure completo firmato Q•BEAUTY
           </p>
-          <div style={{ marginTop: '2rem', fontSize: '1.3rem', lineHeight: '1.6' }}>
+          <div className="product-price-block">
             <p>
               <strong>💰 Prezzo dedicato ai PRIVATI:</strong>{' '}
               <del style={{ color: '#ccc', marginRight: '8px' }}>€ 67,70</del>
@@ -44,13 +44,13 @@ function SetPage() {
             </p>
           </div>
 
-          <div style={{ marginTop: '1.5rem' }}>
+          <div className="product-buy-action">
             <a href={QB_SHOP_URLS.set} className="cta-button">
               Acquista sullo shop
             </a>
           </div>
 
-          <a href="/#prodotti" className="cta-button" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+          <a href="/#prodotti" className="cta-button product-return-button" style={{ marginTop: '1.5rem' }}>
             ← Torna ai Prodotti
           </a>
         </div>

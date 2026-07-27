@@ -38,7 +38,7 @@ function Kerato5() {
             premium, facilmente rivendibile anche alla cliente finale.
           </p>
 
-          <div style={{ marginTop: "1.5rem" }}>
+          <div className="product-buy-action">
             <a href={QB_SHOP_URLS.kerato5} className="cta-button">
               Acquista sullo shop
             </a>
@@ -46,8 +46,8 @@ function Kerato5() {
 
           <a
             href="/#prodotti"
-            className="cta-button"
-            style={{ marginTop: "1.5rem", display: "inline-block" }}
+            className="cta-button product-return-button"
+            style={{ marginTop: "1.5rem" }}
           >
             ← Torna ai Prodotti
           </a>
